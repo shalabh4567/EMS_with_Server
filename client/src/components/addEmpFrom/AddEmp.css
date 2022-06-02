@@ -1,0 +1,141 @@
+.add-employee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem 2rem 2rem;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+  z-index: 10;
+  transition: 0.2s ease-in-out;
+}
+
+.emp-form-heading {
+  margin: 1rem 0 2rem 0;
+}
+.emp-form-heading h3 {
+  justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.emp-form-heading h3 span {
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  color: black;
+  cursor: pointer;
+}
+
+.add-employee input {
+  padding: 0.2rem 0 0.2rem 1rem;
+  border: 1px solid #000000;
+}
+
+.add-employee select {
+  padding: 0.2rem 0 0.2rem 1rem;
+  border: 1px solid #000000;
+}
+
+.add-employee input:focus {
+  outline: none;
+}
+
+.add-employee select:focus {
+  outline: none;
+}
+
+.empName {
+  width: 25rem;
+}
+
+.empName input {
+  width: 100%;
+}
+
+.empId {
+  width: 25rem;
+  margin-top: 2rem;
+}
+
+.empId input {
+  width: 100%;
+}
+
+.empEmail {
+  width: 25rem;
+  margin-top: 2rem;
+}
+
+.empEmail input {
+  width: 100%;
+}
+
+.gender-designation {
+  width: 25rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-designation select {
+  width: 45%;
+}
+
+.gender-designation input {
+  width: 45%;
+}
+
+.salary-dob {
+  width: 25rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.salary-dob input {
+  width: 45%;
+}
+
+.joining-date {
+  width: 25rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.joining-date input {
+  width: 50%;
+}
+
+.add-emp-button {
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.add-emp-button button {
+  width: 50%;
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+/************ OVerlay *************************/
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262525;
+  opacity: 0.9;
+  z-index: 5;
+}

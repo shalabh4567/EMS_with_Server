@@ -1,0 +1,137 @@
+.disBackground {
+  background-color: #2e2e38;
+  min-height: 100vh;
+  padding-bottom: 93px;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  font-size: 1.3rem;
+  left: 30px;
+  color: #fff;
+}
+
+svg {
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  height: 80px;
+}
+
+svg path {
+  fill: white;
+}
+
+svg g polygon {
+  fill: white;
+}
+
+.display-content {
+  width: 97vw;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 6px;
+  background-color: #1f1f24;
+}
+
+/******************** Crud Buttton ************************/
+
+.crud-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add-button {
+  background: #272525;
+  border: 1px solid #2e2e38;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-right: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.add-button:hover {
+  background: rgb(23, 194, 23);
+}
+
+.delete-button {
+  background: #272525;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-right: 1rem;
+  border: 1px solid #2e2e38;
+  transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  background: rgb(189, 16, 16);
+}
+
+.serch-emp {
+  background: #272525;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: #fff;
+  border: 1px solid #2e2e38;
+}
+
+.serch-emp:focus {
+  outline: none;
+}
+
+/***************** Table heading ******************/
+
+.table {
+  margin-top: 2rem;
+  border: none !important;
+  border-collapse: collapse !important;
+}
+
+.table > thead > tr > th > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.table thead tr th h3 {
+  font-size: 22px;
+  color: #fff;
+}
+
+th {
+  vertical-align: middle !important;
+}
+
+tr,
+th,
+td {
+  border: none !important;
+  color: white;
+}
+
+.table > tbody > tr > td > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.tr-background {
+  background: #272525;
+  border-radius: 6px;
+}

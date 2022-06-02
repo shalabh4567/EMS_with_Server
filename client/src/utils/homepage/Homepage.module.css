@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: yellow;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .cover-background {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://img.freepik.com/free-photo/aerial-view-business-team_53876-124515.jpg?t=st=1646630906~exp=1646631506~hmac=723d756c49d1a3062e680068b22cb518e7588ab265d02a1267a37f38d706cbe2&w=1380");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .right-div {
+    width: 50%;
+    height: inherit;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .inner-right-div {
+    width: 70%;
+  }
+  
+  .inner-right-div h1 {
+    font-size: 2.5rem;
+    color: white;
+  }
+  .inner-right-div h2 {
+    font-size: 1.5rem;
+    color: rgb(97, 94, 94);
+  }
+  
+  .inner-right-div button {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    color: white;
+  }
+  .buttons {
+    display: flex;
+  }
+  .SignupButton button {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: large;
+    background: yellow;
+    border-radius: 80px;
+  }
+  
+  .LoginButton button {
+    border: 1px solid yellow;
+  
+    font-size: large;
+    margin-left: 15px;
+    border-radius: 80px;
+  }
+  .LoginButton a {
+    color: white;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .LoginButton button:hover {
+    color: black !important;
+    background: yellow;
+  }
+  
+  .LoginButton button:hover a {
+    color: black;
+  }
+  
+  .NavContainer {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+  }
+  
+  .Logo svg {
+    height: 50px;
+    padding-left: 30px;
+  }
+  
+  .Insights {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    border-bottom: 3px solid black;
+  }
+  
+  .Insights a {
+    color: white;
+    text-align: center;
+  }
+  
+  .Insights:hover {
+    border-bottom: 3px solid yellow;
+  }
+  
+  .AboutUs {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 3px solid black;
+    margin-left: 20px;
+  }
+  
+  /* .AboutUs:hover {
+      border-bottom: 3px solid yellow;
+    } */
+  
+  .AboutUs a {
+    color: white;
+    text-align: center;
+  }
+  
+  :root {
+    --light: #363636;
+    --dark: #2d2d2d;
+    --darker: #1e1e1e;
+    --darkest: #121212;
+    --ey: #ffe600;
+    --shadows: 0 -2px 10px rgba(0, 0, 0, 1);
+  }
+  
+  /* second page */
+  .overall {
+    width: 100%;
+  }
+  
+  .main {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 90px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    background: var(--darkest);
+    height: fit-content;
+  }
+  
+  .main .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .main .card-container .card {
+    width: calc(100% / 3 - 15px);
+    padding: 10px;
+    background: var(--darker);
+    box-shadow: var(--shadows);
+  }
+  
+  .card .cardhead {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    top: 80px;
+    justify-content: center;
+    transition: 0.5s ease;
+  }
+  
+  .card:hover .cardhead {
+    transform: translateY(-80px);
+  }
+  
+  .card .cardvalue {
+    padding: 15px;
+    margin: 10px 0;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    transition: 0.5s ease;
+    opacity: 0;
+  }
+  
+  .card:hover .cardvalue {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 878px) {
+    .cover-background {
+      position: relative;
+      left: 0.001%;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .right-div {
+      width: 100%;
+      height: inherit;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .main .card-container .card {
+      width: calc(100% / 3 - 15px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main .card-container .card {
+      width: calc(100% / 2 - 15px);
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .main .card-container .cardhead {
+      height: auto;
+    }
+    .main .card-container .card {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .inner-right-div h1 {
+      font-size: 7vw;
+      font-weight: 700;
+    }
+  
+    .inner-right-div h2 {
+      font-size: 6vw;
+      font-weight: 400;
+    }
+  
+    .SignupButton button {
+      font-size: 5vw;
+    }
+  
+    .LoginButton button {
+      font-size: 5vw;
+    }
+  
+    .inner-right-div button {
+      padding: 2vw 4vw 2vw 4vw;
+      border-radius: 80px !important;
+    }
+  }
+  /* date-time */
+  .dateTop {
+    position: fixed;
+    display: flex;
+    margin-left: 80%;
+    margin-top: 2.5%;
+    z-index: 500;
+    color: white;
+    height: 65px;
+  }
+  .dateTop:hover {
+    border-bottom: 3px solid yellow;
+  }
+  /* Scroll */
+  .arw {
+    visibility: hidden;
+  }
+  .show {
+    visibility: visible;
+  }
+  #ok {
+    position: fixed;
+    margin-left: 97%;
+    display: flex;
+    z-index: 1000;
+    margin-top: 93vh;
+  }
+  p {
+    text-align: left;
+  }
+  
+  /* footer */
+  .footer {
+    background-color: #000000;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+  }
+  .emsImg {
+    text-align: center;
+    margin-top: 5%;
+  }
+  .icons {
+    text-align: center;
+  }
+  .icons img {
+    width: 30px;
+    height: 30px;
+  }
+  
