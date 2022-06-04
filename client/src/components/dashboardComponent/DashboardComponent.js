@@ -10,13 +10,20 @@ const DashboardComponent = (props) => {
   const [empFound, setEmpFound] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/employees")
-      .then((res) => res.json())
+    fetch("/showAllEmp")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return res.json().then((err) => {
+          throw new Error(err.Error);
+        });
+      })
       .then((data) => {
         setEmployee(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [showAddform]);
 
   const showForm = (show) => {
     setShowAddForm(show);

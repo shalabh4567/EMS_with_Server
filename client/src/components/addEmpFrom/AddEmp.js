@@ -65,7 +65,7 @@ const AddEmp = (props) => {
       localStorage.setItem("latestEmpId", empId);
     }
 
-    fetch("http://localhost:3001/employees", {
+    fetch("/addEmp", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -74,14 +74,22 @@ const AddEmp = (props) => {
         empId: empId,
         empName: empName,
         gender: empGender,
-        email: empEmail,
+        empEmail: empEmail,
         empSalary: empSalary,
         designation: empDesignation,
         dob: empDOB,
         joiningDate: empJOI,
       }),
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+
+        return res.json().then((err) => {
+          throw new Error(err.error);
+        });
+      })
       .then((data) => {
         setShowToast(true);
         sleep(1500).then(() => {
@@ -89,7 +97,9 @@ const AddEmp = (props) => {
           props.setEmployee([...props.employee, data]);
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

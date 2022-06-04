@@ -26,8 +26,15 @@ const EmpData = () => {
   const checkAllEmp = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/employees")
-      .then((res) => res.json())
+    fetch("/showAllEmp")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return res.json().then((err) => {
+          throw new Error(err.Error);
+        });
+      })
       .then((data) => {
         // console.log(data);
         setEmployee(data);
@@ -35,7 +42,7 @@ const EmpData = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [showAddform]);
 
   const upDateData = (obj) => {
     fetch("http://localhost:3001/employees")
@@ -65,7 +72,7 @@ const EmpData = () => {
       } else {
         // console.log("not Found");
         setShowToast(true);
-        setSearchEmp("")
+        setSearchEmp("");
       }
     }
 
@@ -193,7 +200,7 @@ const EmpData = () => {
                   <td>{empFound.gender}</td>
                   <td>{empFound.designation}</td>
                   <td>{empFound.empSalary}</td>
-                  <td>{empFound.email}</td>
+                  <td>{empFound.empEmail}</td>
                   <td>{empFound.dob}</td>
                   <td>{empFound.joiningDate}</td>
                   <td>
@@ -320,7 +327,7 @@ const EmpData = () => {
                       <td>{emp.gender}</td>
                       <td>{emp.designation}</td>
                       <td>{emp.empSalary}</td>
-                      <td>{emp.email}</td>
+                      <td>{emp.empEmail}</td>
                       <td>{emp.dob}</td>
                       <td>{emp.joiningDate}</td>
                       <td>

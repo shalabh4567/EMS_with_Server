@@ -89,7 +89,7 @@ function Main(props) {
                   <td>{props.empFound.gender}</td>
                   <td>{props.empFound.designation}</td>
                   <td>{props.empFound.empSalary}</td>
-                  <td>{props.empFound.email}</td>
+                  <td>{props.empFound.empEmail}</td>
                   <td>{props.empFound.dob}</td>
                   <td>{props.empFound.joiningDate}</td>
                 </tr>
@@ -106,7 +106,7 @@ function Main(props) {
                       <td>{emp.gender}</td>
                       <td>{emp.designation}</td>
                       <td>{emp.empSalary}</td>
-                      <td>{emp.email}</td>
+                      <td>{emp.empEmail}</td>
                       <td>{emp.dob}</td>
                       <td>{emp.joiningDate}</td>
                     </tr>
